@@ -4,9 +4,6 @@ const elTaskInput = document.querySelector('#taskInput')
 function renderProductsListAll(products) {
   const elUl = document.querySelector('#taskList')
   elUl.innerHTML = ''
-
-  // Для каждого элемента (item) под определенным номером (index) делаем:
-  // forEach просто берет твой массив arr, смотрит на него по очереди и для каждой строчки вызывает функцию renderTaskList(item, index), передавая туда и сам текст, и его номер.
   products.forEach(product => {
     const elLi = generateLi(product)
     elUl.appendChild(elLi)
