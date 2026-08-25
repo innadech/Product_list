@@ -53,7 +53,6 @@ function generateLi(product) {
   elSpan.innerHTML = product
   elButtonDelete.innerHTML = 'Delete'
 
-  // elButtonDelete.onclick = e => onClickDeleteButton(index, e)
   elButtonDelete.onclick = onClickDeleteButton
 
   elLi.onclick = onClickEditProduct
@@ -66,15 +65,3 @@ function generateLi(product) {
 }
 
 elAddTaskButton.onclick = onClickAddTaskButton
-
-function checkboxColor() {
-  const elTaskInput = document.querySelector('#taskInput')
-  if (document.createElement('input').checked == true) {
-    elLi.setAttribute('class', 'completed')
-  }
-}
-
-// function renderTodoApp() {
-//   let todos = getTodos()
-//   renderTaskListAll(todos) // Передаем весь массив в ваш view
-// }
