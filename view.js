@@ -1,5 +1,5 @@
 const elAddTaskButton = document.querySelector('#addTaskButton')
-const elTaskInput = document.querySelector('#taskInput')
+const elInput = document.querySelector('#taskInput')
 
 function renderProductsListAll(products) {
   const elUl = document.querySelector('#taskList')
@@ -11,12 +11,9 @@ function renderProductsListAll(products) {
 }
 
 function onClickAddTaskButton() {
-  let elTaskInput = document.querySelector('#taskInput')
-  let a = elTaskInput.value
-  if (a.length >= 3) {
-    handleProductsAdd(a) // Вызываем контроллер добавления
-    elTaskInput.value = '' // Исправили очистку инпута
-  }
+  let a = elInput.value
+  handleProductsAdd(a) // Вызываем контроллер добавления
+  elInput.value = '' // Исправили очистку инпута
 }
 
 function onClickDeleteButton(e) {

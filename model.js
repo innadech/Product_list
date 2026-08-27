@@ -6,6 +6,7 @@ function getProducts() {
 
 function addProduct(product) {
   product = product.trim()
+  if (product.length < 3) return
   if (product === '') return
   if (!products.includes(product)) {
     products.push(product)
